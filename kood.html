@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بوابة الدخول الآمنة</title>
+
+<!-- خط أجمل -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#06152e,#0b2352,#123b84);
+    overflow:hidden;
+    position:relative;
+}
+
+/* تأثيرات الخلفية */
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+    filter:blur(20px);
+}
+
+body::before{
+    width:300px;
+    height:300px;
+    top:-100px;
+    right:-100px;
+}
+
+body::after{
+    width:250px;
+    height:250px;
+    bottom:-100px;
+    left:-100px;
+}
+
+/* الكارد بالنص */
+.container{
+    width:350px;
+    max-width:90%;
+    padding:35px 30px;
+    text-align:center;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border-radius:28px;
+    box-shadow:0 20px 50px rgba(0,0,0,.4);
+    color:#fff;
+}
+
+/* أيقونة الويب */
+.web-icon{
+    width:90px;
+    height:90px;
+    margin:0 auto 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:48px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+h1{
+    font-size:26px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.desc{
+    color:#d6e3ff;
+    font-size:15px;
+    margin-bottom:22px;
+}
+
+/* زر التليكرام */
+.telegram-btn{
+    width:100%;
+    height:55px;
+    background:#229ED9;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    text-decoration:none;
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    margin-bottom:25px;
+    transition:.3s;
+    box-shadow:0 8px 25px rgba(34,158,217,.35);
+}
+
+.telegram-btn:hover{
+    transform:translateY(-2px);
+    background:#1c90c7;
+}
+
+.telegram-btn svg{
+    width:24px;
+    height:24px;
+    fill:#fff;
+}
+
+/* حقل الكود */
+input{
+    width:100%;
+    height:55px;
+    border:none;
+    border-radius:16px;
+    background:rgba(255,255,255,.10);
+    color:#fff;
+    text-align:center;
+    font-size:24px;
+    letter-spacing:8px;
+    outline:none;
+    margin-bottom:15px;
+}
+
+input::placeholder{
+    color:#a9bddf;
+}
+
+/* زر الدخول */
+button{
+    width:100%;
+    height:55px;
+    border:none;
+    border-radius:16px;
+    background:linear-gradient(90deg,#0ea5e9,#38bdf8);
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(56,189,248,.35);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="web-icon">🌐</div>
+
+    <h1>بوابة الدخول الآمنة</h1>
+
+    <p class="desc">
+        أدخل كود الدخول المكوّن من 4 أرقام
+    </p>
+
+    <a href="https://t.me/C9_9P" target="_blank" class="telegram-btn">
+        <svg viewBox="0 0 24 24">
+            <path d="M21.5 3.5L2.8 10.7c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.9 6c.3.8.1 1.1 1 .1l2.7-2.6 5.5 4c1 .6 1.7.3 2-.9l3.2-15c.4-1.5-.6-2.2-2.2-1.6z"/>
+        </svg>
+        الحصول على كود الدخول
+    </a>
+
+    <input type="password" id="code" maxlength="4" placeholder="••••">
+
+    <button onclick="checkCode()">🔓 دخول</button>
+
+</div>
+
+<script>
+function checkCode() {
+    const code = document.getElementById("code").value;
+
+    if (code === "2026") {
+        window.location.href = "https://66zone.fwh.is";
+    } else {
+        alert("❌ كود الدخول غير صحيح");
+    }
+}
+</script>
+
+</body>
+</html>
